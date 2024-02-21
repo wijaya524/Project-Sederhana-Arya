@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .pusat{
+        margin: auto;
+        margin-top: 200px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        display: grid;
+        background-color: rgba(1, 1, 1, 0.574);
+        width: 300px;
+        height: 300px;
+        border-radius: 20px;
+        border: 8px groove black;
+        box-shadow: 10px 10px 15px 5px black;
+    }
+
+     h1{
+        color: aliceblue;
+        font-size: 20px;
+        font-family: sans-serif;
+     }
+
+    button{
+        border: 3px solid black;
+        border-radius: 5px;
+        width: 200px;
+        height: 40px;
+    }
+</style>
+<body>
+    <div class="pusat">
+        <h1>Warna</h1>
+        <button type="button">Klik </button>
+    </div>
+    <script>
+        const h1 = document.querySelector("h1");
+        const button = document.querySelector("button");
+
+        button.addEventListener("click", ()=>{
+            const dulai = arya();
+            document.body.style.backgroundColor = dulai
+            h1.innerHTML = dulai
+        })
+
+       const arya = function (){
+            const r = Math.floor(Math.random() * 255);
+            const g = Math.floor(Math.random() * 255);
+            const b = Math.floor(Math.random() * 255);
+
+            return `rgb(${r}, ${g}, ${b})`
+        }
+    </script>
+</body>
+</html>

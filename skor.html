@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>0</h1>
+    <button id="dulai">tambah</button>
+
+    <script>
+        let button = document.querySelector("#dulai");
+        let h1 = document.querySelector("h1");
+        let plus = 0;
+        
+        
+        button.addEventListener("click", ()=> {
+         plus += 1;
+         h1.innerHTML = plus;
+        })
+           
+    </script>
+</body>
+</html>
